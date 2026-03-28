@@ -1,5 +1,11 @@
+class CavemanType{
+    static Puncher = new DinoType('Puncher', { speed: 1, range: 2, strength: 2 })
+    constructor(attributes) {
+        Object.assign(this, attributes)
+    }
+}
 
-class caveman{
+class Caveman{
     constructor(posX, posY, speed, range, strength, id){
         this.posX =posX;
         this.posY =posY;
@@ -8,6 +14,10 @@ class caveman{
         this.strength = strength;
         this.id = id;
     };
+    show(){
+        fill("#000000");
+        circle(this.posX, this.posY, this.range);
+    }
     calculateClosestDino(dinoList){
         //for each existing dino, calculate if dist(self, dino) < range and save smallest number
         //return dino within range with least distance
