@@ -3,11 +3,5 @@ function setup() {
 }
 
 function draw() {
-    background(220);
-    if (mouseIsPressed === true) {
-        fill(0);
-    } else {
-    fill(255);
-    }
-    circle(mouseX, mouseY, 100);
+    path();
 }
